@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFh1.Migrations
 {
     [DbContext(typeof(LibraryDbContext))]
-    [Migration("20230204055358_InitialMigration")]
+    [Migration("20230207124904_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -77,9 +77,6 @@ namespace EFh1.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("BookThemeId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
